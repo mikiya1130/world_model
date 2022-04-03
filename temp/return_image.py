@@ -34,7 +34,7 @@ def return_image_and_moveable_node(image, action):
     Graph
     input image(node), action(direction)
     return image and moveable_direction
- 
+
     """
     currecnt_node = node_string_to_int(image[:5])
     moveable_nodes = Graph[currecnt_node]
