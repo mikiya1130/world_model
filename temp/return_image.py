@@ -1,6 +1,13 @@
+from PIL import Image
+
 N, M = map(int, input().split())
 Graph = [[] for _ in range(N)]
- 
+
+north = 4
+south = 2
+east = 1
+west = 3
+
 for i in range(M):
     # 0 index
     a, b, direction = map(int, input().split())
@@ -27,7 +34,10 @@ def node_string_to_int(node):
             break
     node = int(node[index:])
     return node
- 
+
+
+pictures = []
+data_url = './data/'
 
 def return_image_and_moveable_node(image, action):
     """
@@ -43,5 +53,8 @@ def return_image_and_moveable_node(image, action):
         if i[1] == action:
             next_node = i[0]
     next_image = node_int_to_string(next_node) + str(action)
+    next_image = Image.open(data_url + next_image + ".jpg")
+    pictures.append(next_image)
     next_moveable_nodes = Graph[next_node]
     return next_image, next_moveable_nodes
+
