@@ -59,7 +59,7 @@ group_1 = [str(i)
 group_2 = [str(i)
            for i in range(123, 321)] + [str(i) for i in range(569, 765)
                                         ] + [str(i) for i in range(766, 1051)]
-group_3 = 765
+group_3 = ['765']
 """
 画像ファイル名の方角をここでrenameする。
 """
