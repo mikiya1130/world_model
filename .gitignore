@@ -1,4 +1,4 @@
 /data/
 /logs/
 /temp/*.csv
-/temp/*.gif
+/*/.ipynb_checkpoints
