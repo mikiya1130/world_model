@@ -1,6 +1,7 @@
 import os
 import cv2
 from tqdm import tqdm
+
 #画像入ったディレクトリのpath
 img_dir=r"C:\Users\kota713\Desktop\WorldModels\img\part3"
 #リサイズ後の画像を保存するディレクトリのpath
