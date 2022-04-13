@@ -1,6 +1,6 @@
 import os
 import cv2
-
+from tqdm import tqdm
 #画像入ったディレクトリのpath
 img_dir=r"C:\Users\kota713\Desktop\WorldModels\img\part3"
 #リサイズ後の画像を保存するディレクトリのpath
@@ -12,7 +12,7 @@ if not os.path.isdir(save_dir):
 files=os.listdir(img_dir)#元画像をリスト化
 
 #リサイズ＆保存の処理
-for file in files:
+for file in tqdm(files):
     img=os.path.join(img_dir,file)
     read_img=cv2.imread(img)
     #cv2.imshow("readimg",read_img)
