@@ -3,9 +3,9 @@ import cv2
 from tqdm import tqdm
 
 #画像入ったディレクトリのpath
-img_dir="data/interim"
+img_dir=r"C:\Users\kota713\Desktop\WorldModels\img\part3"
 #リサイズ後の画像を保存するディレクトリのpath
-save_dir="data/processed"
+save_dir=r"C:\Users\kota713\Desktop\WorldModels\img\resized_img"
 #save_dirを作っていない場合、ディレクトリを作成する
 if not os.path.isdir(save_dir):
     os.makedirs(save_dir)
