@@ -2,13 +2,13 @@
 画像ファイルを1スタートから0からスタートで番号をリネームしていく。
 また方角に関しても北を0として、時計周りに1, 2, 3にリネームする。なお、方角に関しては3グループに別れているので全て統一させる。
 今回使用するのは、画像のファイル名で3079~4402に相当するファイル。これを0000~1323にする。
-実行に関してはどの階層でもいいですが、part3,4,5の画像保存場所によってはエラーが起きるので、一部下記パスを適宜修正して下さい。
 """
 
 import os
 import glob
+
 """
-必要な画像ファイルのpathだけをここで格納する。
+必要な画像ファイルのpathだけをfile_listに格納する。
 """
 
 
@@ -27,6 +27,7 @@ def append_list(file_list, files):
 画像ファイル名をここで0スタートにしてrenameする。（方角に関してはここでは何もしない）
 """
 
+
 def rename_number(file_list):
     path_list = []
     path_4_list = []
@@ -40,6 +41,7 @@ def rename_number(file_list):
         path_list.append(path_5)
 
     return path_list, path_4_list
+
 
 """
 画像ファイル名の方角をここでrenameする。
@@ -106,12 +108,12 @@ if __name__ == '__main__':
     path_list = rename_direction(path_list, path_4_list)
 
     new_dir_path = "./data/interim"
-    os.mkdir(new_dir_path)
+    os.mkdir(new_dir_path, exist_ok=True)
 
     path_list_fin = []
-    for i in range(len(path_list)):
-        path__ = new_dir_path + "/" + path_list[i] + ".jpg"
+    for path in path_list:
+        path__ = new_dir_path + "/" + path + ".jpg"
         path_list_fin.append(path__)
 
-    for i in range(len(file_list)):
-        os.rename(file_list[i], path_list_fin[i])
+    for file in file_list:
+        os.rename(file_list, path_list_fin)
