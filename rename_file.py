@@ -41,7 +41,6 @@ def rename_number(file_list):
 
     return path_list, path_4_list
 
-
 """
 画像ファイル名の方角をここでrenameする。
 """
@@ -102,7 +101,7 @@ if __name__ == '__main__':
     group_2 = [str(i) for i in range(123, 321)] + [
         str(i) for i in range(569, 765)
     ] + [str(i) for i in range(766, 1051)]
-    group_3 = "765"
+    group_3 = ["765"]
 
     path_list = rename_direction(path_list, path_4_list)
 
