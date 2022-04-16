@@ -115,5 +115,5 @@ if __name__ == '__main__':
         path__ = new_dir_path + "/" + path + ".jpg"
         path_list_fin.append(path__)
 
-    for file in file_list:
-        os.rename(file_list, path_list_fin)
+    for file, newfile in zip(file_list, path_list_fin):
+        os.rename(file, newfile)
