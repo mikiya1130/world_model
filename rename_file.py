@@ -108,7 +108,7 @@ if __name__ == '__main__':
     path_list = rename_direction(path_list, path_4_list)
 
     new_dir_path = "./data/interim"
-    os.mkdir(new_dir_path, exist_ok=True)
+    os.makedirs(new_dir_path, exist_ok=True)
 
     path_list_fin = []
     for path in path_list:
