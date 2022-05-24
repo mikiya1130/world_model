@@ -21,3 +21,11 @@ RSSM は Dreamer を初めとした世界モデルに基づく強化学習で用
 ## 使用データセット
 
 - [Google Street View dataset - CRCV](https://www.crcv.ucf.edu/data/GMCP_Geolocalization/)
+
+## 結果
+
+https://user-images.githubusercontent.com/63896499/170143662-b9e184e4-4509-4e75-97df-539ce4b2ee94.mp4
+
+## まとめ
+
+![world_model_poster_team_11](https://user-images.githubusercontent.com/63896499/170142922-f5d7e153-87a2-4609-b3e5-d8c779886fbc.png)
